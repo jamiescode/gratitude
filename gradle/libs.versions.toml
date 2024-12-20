@@ -12,7 +12,7 @@ hilt = "2.53.1"
 kover = "0.9.0"
 
 # Libraries
-coroutines = "1.10.0"
+coroutines = "1.10.1"
 retrofit = "2.11.0"
 okhttp-logging-interceptor = "4.12.0"
 glide = "1.0.0-beta01"
