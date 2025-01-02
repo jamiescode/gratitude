@@ -37,7 +37,7 @@ espresso = "3.6.1"
 androidx-test = "1.6.2"
 mockk = "1.13.14"
 kluent = "1.73"
-mockito = "5.14.2"
+mockito = "5.15.2"
 core-testing = "2.2.0"
 
 [plugins]
