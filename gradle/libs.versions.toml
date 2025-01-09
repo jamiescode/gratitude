@@ -8,7 +8,7 @@ android = "8.8.0"
 kotlin = "2.0.21"
 detekt = "1.23.7"
 kotlinter = "4.5.0"
-hilt = "2.54"
+hilt = "2.55"
 kover = "0.9.1"
 
 # Libraries
