@@ -89,9 +89,9 @@ hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.re
 # Annotations
 
 # Testing
-junit5-bom = { module = "org.junit:junit-bom", version = "5.11.4" }
+junit5-bom = { module = "org.junit:junit-bom", version = "5.13.1" }
 junit5 = { module = "org.junit.jupiter:junit-jupiter" }
-junit4 = { module = "junit:junit", version = "4.13.2" }
+junit5-runtime = { module = "org.junit.platform:junit-platform-launcher" }
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 kluent = { module = "org.amshove.kluent:kluent-android", version.ref = "kluent" }
@@ -102,7 +102,6 @@ room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 
 # UI testing
 espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
-compose-ui-test = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose"}
 compose-navigation-test = { module = "androidx.navigation:navigation-testing", version.ref = "compose-navigation" }
 
 [bundles]
@@ -115,8 +114,11 @@ compose = [
     "compose-navigation", "compose-hilt-navigation",
 ]
 test = [
-    "junit5", "junit4", "mockk", "kluent", "mockito", "test-coroutines", "core-testing",
+    "junit5", "mockk", "kluent", "mockito", "test-coroutines", "core-testing",
+]
+test-runtime = [
+    "junit5-runtime",
 ]
 uitest = [
-    "espresso", "compose-ui-test", "compose-navigation-test", "androidx-test-runner", "hilt-testing",
+    "espresso", "compose-navigation-test", "androidx-test-runner", "hilt-testing",
 ]

@@ -36,6 +36,7 @@ dependencies {
     testImplementation(platform(libs.junit5.bom))
     testImplementation(libs.bundles.test)
     testImplementation(libs.room.testing)
+    testRuntimeOnly(libs.bundles.test.runtime)
 
     androidTestImplementation(libs.bundles.uitest)
     kaptAndroidTest(libs.hilt.compiler)
