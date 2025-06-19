@@ -1,8 +1,6 @@
 package com.jamiescode.showcase.gratitude.data.database
 
-import androidx.room.DatabaseConfiguration
 import androidx.room.InvalidationTracker
-import androidx.sqlite.db.SupportSQLiteOpenHelper
 import io.mockk.mockk
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -35,7 +33,6 @@ class JournalEntryTest {
 
     @Test
     fun `database creation`() {
-        val sqLiteOpenHelper: SupportSQLiteOpenHelper = mockk(relaxed = true)
         val journalEntryDatabase =
             object : JournalEntryDatabase() {
                 override fun journalEntryDao(): JournalEntryDao = mockk(relaxed = true)
@@ -44,9 +41,13 @@ class JournalEntryTest {
                     // Noop
                 }
 
-                override fun createInvalidationTracker(): InvalidationTracker = InvalidationTracker(database = this)
-
-                override fun createOpenHelper(config: DatabaseConfiguration) = sqLiteOpenHelper
+                override fun createInvalidationTracker(): InvalidationTracker =
+                    InvalidationTracker(
+                        database = this,
+                        shadowTablesMap = emptyMap(),
+                        viewTables = emptyMap(),
+                        tableNames = emptyArray(),
+                    )
             }
         assertNotNull(journalEntryDatabase)
     }
