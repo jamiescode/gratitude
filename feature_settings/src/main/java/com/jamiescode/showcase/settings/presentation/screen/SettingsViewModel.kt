@@ -55,7 +55,7 @@ class SettingsViewModel
         }
 
         fun navigateToBuyMeACoffee() {
-            appNavigator.navigateTo(Destinations.BuyMeACofee)
+            appNavigator.navigateTo(Destinations.BuyMeACoffee)
         }
 
         fun navigateToUnderConstruction() {
