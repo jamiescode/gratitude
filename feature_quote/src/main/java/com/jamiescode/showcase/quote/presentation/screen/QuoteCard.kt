@@ -17,17 +17,11 @@ fun quoteCard(viewModel: QuoteViewModel = hiltViewModel()) {
             initial = QuoteViewModel.State.Initial,
         )
     when (val value = state.value) {
-        QuoteViewModel.State.Initial -> {
-            // Nothing
-        }
-        QuoteViewModel.State.Loading -> {
-            quoteLoading()
-        }
-        QuoteViewModel.State.Error -> {
-            quoteError()
-        }
         is QuoteViewModel.State.Success -> {
             quoteSuccess(value.quote)
+        }
+        else -> {
+            // Nothing for Initial, Loading or Error
         }
     }
 }

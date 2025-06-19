@@ -13,44 +13,22 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jamiescode.showcase.quote.R
 import com.jamiescode.showcase.quote.domain.model.Quote
 import com.jamiescode.showcase.theme.getQuoteColor
 import com.jamiescode.showcase.theme.gratitudeFont
 
 @Composable
-fun quoteLoading() {
-    quoteCard {
-        Text(
-            text = stringResource(R.string.quote_loading_message),
-            fontFamily = gratitudeFont,
-            fontSize = 18.sp,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth(),
-        )
-    }
-}
-
-@Composable
-fun quoteError() {
-    quoteCard {
-        Text(
-            text = stringResource(R.string.quote_error_message),
-            fontFamily = gratitudeFont,
-            fontSize = 18.sp,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth(),
-        )
-    }
-}
-
-@Composable
 fun quoteSuccess(quote: Quote) {
-    quoteCard {
+    Card(
+        modifier =
+            Modifier
+                .padding(horizontal = 16.dp, vertical = 8.dp)
+                .fillMaxWidth(),
+        colors = CardDefaults.cardColors().copy(containerColor = getQuoteColor()),
+    ) {
         Row(
             modifier =
                 Modifier
@@ -77,18 +55,5 @@ fun quoteSuccess(quote: Quote) {
                 )
             }
         }
-    }
-}
-
-@Composable
-private fun quoteCard(content: @Composable () -> Unit) {
-    Card(
-        modifier =
-            Modifier
-                .padding(horizontal = 16.dp, vertical = 8.dp)
-                .fillMaxWidth(),
-        colors = CardDefaults.cardColors().copy(containerColor = getQuoteColor()),
-    ) {
-        content()
     }
 }
