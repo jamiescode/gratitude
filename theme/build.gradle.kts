@@ -23,6 +23,7 @@ dependencies {
     implementation(libs.oss.licenses)
 
     testImplementation(libs.bundles.test)
+    testRuntimeOnly(libs.bundles.test.runtime)
     androidTestImplementation(libs.bundles.uitest)
     kaptAndroidTest(libs.hilt.compiler)
 }

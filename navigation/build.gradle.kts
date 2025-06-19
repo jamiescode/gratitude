@@ -24,6 +24,7 @@ dependencies {
     implementation(libs.chrome.custom.tabs)
 
     testImplementation(libs.bundles.test)
+    testRuntimeOnly(libs.bundles.test.runtime)
     androidTestImplementation(libs.bundles.uitest)
     kaptAndroidTest(libs.hilt.compiler)
 }
