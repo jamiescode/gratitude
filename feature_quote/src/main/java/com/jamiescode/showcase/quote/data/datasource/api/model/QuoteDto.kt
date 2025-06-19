@@ -1,8 +1,10 @@
 package com.jamiescode.showcase.quote.data.datasource.api.model
 
+import com.google.gson.annotations.SerializedName
+
 data class QuoteDto(
-    // Quote text
-    val q: String,
-    // Author name
-    val a: String,
+    @SerializedName("q")
+    val quoteText: String,
+    @SerializedName("a")
+    val authorName: String,
 )

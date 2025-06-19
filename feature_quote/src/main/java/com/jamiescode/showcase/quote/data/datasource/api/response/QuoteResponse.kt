@@ -8,7 +8,7 @@ typealias QuoteResponse = List<QuoteDto>
 internal fun QuoteResponse?.toDomainModel(): List<Quote> =
     this?.map {
         Quote(
-            text = it.q,
-            author = it.a,
+            text = it.quoteText,
+            author = it.authorName,
         )
     } ?: emptyList()
