@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 Destinations.FeedbackForm -> {
                     LocalContext.current.launchCustomTabs(AppUrls.FEEDBACK_FORM)
                 }
-                Destinations.BuyMeACofee -> {
+                Destinations.BuyMeACoffee -> {
                     LocalContext.current.launchCustomTabs(AppUrls.BUY_ME_A_COFFEE)
                 }
                 else -> {
