@@ -4,7 +4,7 @@ sdk-compile = "35"
 sdk-min = "26"
 
 # Plugins
-android = "8.10.1"
+android = "8.11.0"
 kotlin = "2.2.0"
 detekt = "1.23.8"
 kotlinter = "5.1.1"
