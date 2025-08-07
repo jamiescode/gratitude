@@ -34,7 +34,7 @@ chrome-custom-tabs = "1.8.0"
 
 # Testing
 espresso = "3.6.1"
-androidx-test = "1.6.2"
+androidx-test = "1.7.0"
 mockk = "1.14.5"
 kluent = "1.73"
 mockito = "5.18.0"
