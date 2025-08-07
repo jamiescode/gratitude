@@ -33,7 +33,7 @@ datastore = "1.1.7"
 chrome-custom-tabs = "1.8.0"
 
 # Testing
-espresso = "3.6.1"
+espresso = "3.7.0"
 androidx-test = "1.7.0"
 mockk = "1.14.5"
 kluent = "1.73"
