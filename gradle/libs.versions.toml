@@ -5,7 +5,7 @@ sdk-min = "26"
 
 # Plugins
 android = "8.13.0"
-kotlin = "2.2.10"
+kotlin = "2.2.20"
 detekt = "1.23.8"
 kotlinter = "5.2.0"
 hilt = "2.57.1"
