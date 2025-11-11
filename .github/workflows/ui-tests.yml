@@ -29,7 +29,7 @@ jobs:
           disable-animations: true
           script: ./gradlew connectedCheck
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: ui-test-results.zip
           path: ./**/build/reports/ui-tests/

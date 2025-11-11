@@ -22,7 +22,7 @@ jobs:
       - name: Run lint
         run: ./gradlew lint
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: lint-results-debug.html.zip
           path: app/build/reports/lint-results-debug.html
