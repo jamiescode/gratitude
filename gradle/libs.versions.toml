@@ -7,7 +7,7 @@ sdk-min = "26"
 android = "8.13.1"
 kotlin = "2.2.21"
 detekt = "1.23.8"
-kotlinter = "5.2.0"
+kotlinter = "5.3.0"
 hilt = "2.57.2"
 kover = "0.9.3"
 
